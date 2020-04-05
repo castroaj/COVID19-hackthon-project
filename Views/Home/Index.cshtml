@@ -1,0 +1,79 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+<link rel="stylesheet" type="text/css" href="~/css/home.css">
+<link rel="stylesheet" type="text/css" href="~/css/site.css">
+  
+    <div class="container">
+        <div class="card-deck">
+            <div class="row">
+                <div class="card cardForm">
+                    <div class="content">
+                        <a style="color: black" asp-area="" asp-controller="About" asp-action="Index">
+                            <div class="card-header headFormat">
+                                <h2 class="cardTitle text-center cardTitleFS">About the Virus</h2>
+                            </div>
+                            <div class="card-body text-center">
+                                <img class="card-img-top img-fluid padimg" src="~/css/images/covid-19_image.jpg">
+                                <p class="card-text">
+                                    Visit this page if you want to learn more about the virus
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card cardForm">
+                    <div class="content">
+                        <a style="color: black" asp-area="" asp-controller="ToDo" asp-action="Index">
+                            <div class="card-header headFormat">
+                                <h2 class="cardTitle text-center cardTitleFS">What to do?</h2>
+                            </div>
+                            <div class="card-body text-center">
+                                <img class="card-img-top img-fluid padimg" src="~/css/images/washHands.jpg">
+                                <p class="card-text">
+                                    Visit this page if you want to learn more about what to do to stay safe 
+                                    from COVID-19
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="card cardForm">
+                    <div class="content">
+                        <a style="color: black" asp-area="" asp-controller="Research" asp-action="Index">
+                            <div class="card-header headFormat">
+                                <h2 class="cardTitle text-center cardTitleFS">News</h2>
+                            </div>
+                            <div class="card-body text-center">
+                                <img class="card-img-top img-fluid padimg" src="~/css/images/news.png">
+                                <p class="card-text">
+                                    Visit this page if you want all the news on COVID-19.
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card cardForm">
+                    <div class="content">
+                        <a style="color: black" asp-area="" asp-controller="Research" asp-action="Index">
+                            <div class="card-header headFormat">
+                                <h2 class="cardTitle text-center cardTitleFS">Research</h2>
+                            </div>
+                            <div class="card-body text-center">
+                                <img class="card-img-top img-fluid padimg" src="~/css/images/researchimg.jpg">
+                                <p class="card-text">
+                                    Visit this page if you want to learn more about the virus.
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </div>
+
+<div style="margin-bottom: 50px;"></div>

@@ -1,0 +1,18 @@
+body {
+    background-color: lightgrey;
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+    background-size: cover;
+}
+
+.padimg {
+    padding: 15px;
+}
+
+.cardLeft {
+    margin-right: 100px;
+}
+
+.headFormat {
+    background-color: rgb(240,240,240);
+}

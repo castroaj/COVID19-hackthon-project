@@ -1,0 +1,32 @@
+@model COVID19_hackthon_project.Models.ListOfNewsModel
+
+@{
+    ViewData["Title"] = "Impact";
+}
+
+<div class="container">
+    <div class="card-deck">
+        @foreach (var i in Model.defaultList)
+        {
+            <div class="row" style="width: 100%;">
+                <div class="card mb-3 cardForm">
+                    <div class="row no-gutters">
+                        <div class="col-md-12">
+                            <div class="card-header">
+                                @i.Title
+                            </div>
+                            <div class="card-body">
+                                <h5><strong>Authors:</strong> @i.Authors</h5>
+                                <h5><strong>Year:</strong> @i.Year</h5>
+                                <h5><strong>DOI Link:</strong> @i.DOI</h5>
+                                <p>@i.Abstract</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+
