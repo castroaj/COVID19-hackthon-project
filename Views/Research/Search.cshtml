@@ -1,0 +1,69 @@
+@model COVID19_hackthon_project.Models.ListOfNewsModel
+
+@{
+    ViewData["Title"] = "Research";
+}
+
+<script src="~/js/research.js" asp-append-version="true"></script>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="card mb-3" style="width: 92%;">
+            <div class="row no-gutters">
+                <div class="col-md-12">
+                    <div class="card-header">
+                        <button id="optionsButton" onclick="openOptions()"><h2>View filtering options</h2></button>
+                    </div>
+                    <div id="options" class="card-body" style="display: none;">
+                        <form id='form1' asp-controller="Research" asp-action="Search">
+                            <table>
+                                <tr>
+                                    <td><h4>Title Search: </h4><input name="titleSearch" type="search"></td>
+                                    <td><h4>Author Search: </h4><input name="authorSearch" type="search"></td>
+                                    <td><h4>Abstract Search: </h4><input name="abstractSearch" type="search"></td>
+                                    <td><h4># of Results</h4></td>
+                                    <td><select name="filterCount">
+                                        <option value="all">All Results</option>
+                                        <option value="10">10</option>
+                                        <option value="25">25</option>
+                                        <option value="50">50</option>
+                                        <option value="100">100</option>
+                                        <option value="500">500</option>
+                                        <option value="1000">1000</option>
+                                    </select></td><br>
+                                </tr>
+                            </table>
+                            <button type="submit">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="card-deck">
+        @foreach (var i in Model.List)
+        {
+            <div id='row-@i.Title' class="row" style="width: 20%;">
+                <div class="card mb-3 cardForm" style="margin-left: 40px;">
+                    <div class="row no-gutters">
+                        <div class="col-md-12">
+                            <div class="card-header">
+                                <h5>@i.Title</h5>
+                                <button id="'result-@i.Title'" onclick="openresult('@i.Title')">Open Result</button>
+                            </div>
+                            <div id='result-body-@i.Title' class="card-body" style="display: none;">
+                                <h5><strong>Authors:</strong> @i.Authors</h5>
+                                <h5><strong>Year:</strong> @i.Year</h5>
+                                <h5><strong>DOI Link:</strong> @i.DOI</h5>
+                                <h5><strong>Abstract:</strong></h5>
+                                <p>@i.Abstract</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

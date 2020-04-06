@@ -31,7 +31,6 @@
 /Users/AlexCast/Documents/ExtraPrograms/COVID19-hackthon-project/obj/Debug/netcoreapp3.1/COVID19-hackthon-project.dll
 /Users/AlexCast/Documents/ExtraPrograms/COVID19-hackthon-project/obj/Debug/netcoreapp3.1/COVID19-hackthon-project.pdb
 /Users/AlexCast/Documents/ExtraPrograms/COVID19-hackthon-project/obj/Debug/netcoreapp3.1/COVID19-hackthon-project.csproj.CopyComplete
-/Users/AlexCast/Documents/ExtraPrograms/COVID19-hackthon-project/obj/Debug/netcoreapp3.1/Razor/Views/Research/Index.cshtml.g.cs
 /Users/AlexCast/Documents/ExtraPrograms/COVID19-hackthon-project/obj/Debug/netcoreapp3.1/Razor/Views/ToDo/Index.cshtml.g.cs
 /Users/AlexCast/Documents/ExtraPrograms/COVID19-hackthon-project/obj/Debug/netcoreapp3.1/Razor/Views/About/Index.cshtml.g.cs
 /Users/AlexCast/Documents/ExtraPrograms/COVID19-hackthon-project/bin/Debug/netcoreapp3.1/Microsoft.Bcl.AsyncInterfaces.dll
@@ -59,3 +58,5 @@
 /Users/AlexCast/Documents/ExtraPrograms/COVID19-hackthon-project/bin/Debug/netcoreapp3.1/runtimes/win-arm64/native/e_sqlite3.dll
 /Users/AlexCast/Documents/ExtraPrograms/COVID19-hackthon-project/bin/Debug/netcoreapp3.1/runtimes/win-x64/native/e_sqlite3.dll
 /Users/AlexCast/Documents/ExtraPrograms/COVID19-hackthon-project/bin/Debug/netcoreapp3.1/runtimes/win-x86/native/e_sqlite3.dll
+/Users/AlexCast/Documents/ExtraPrograms/COVID19-hackthon-project/obj/Debug/netcoreapp3.1/Razor/Views/Research/Index.cshtml.g.cs
+/Users/AlexCast/Documents/ExtraPrograms/COVID19-hackthon-project/obj/Debug/netcoreapp3.1/Razor/Views/Research/Search.cshtml.g.cs

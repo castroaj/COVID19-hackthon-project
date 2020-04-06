@@ -65,6 +65,10 @@ html {
 
 body {
   /* Margin bottom by footer height */
+  background-color: lightgrey;
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
   margin-bottom: 60px;
 
 }

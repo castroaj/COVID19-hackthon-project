@@ -6,6 +6,11 @@ namespace COVID19_hackthon_project.Models
 {
     public class ListOfNewsModel
     {
-        public List<NewsModel> defaultList {get; set;}
+        public List<NewsModel> List {get; set;}
+        public string titleString {get; set;}
+        public string authorsString {get; set;}
+        public string abstractString {get; set;}
+        public string filterCount {get; set;}
+
     }
 }

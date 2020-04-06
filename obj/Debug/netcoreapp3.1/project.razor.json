@@ -20541,13 +20541,13 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/Users/AlexCast/Documents/ExtraPrograms/COVID19-hackthon-project/Views/Impact/Index.cshtml",
-      "TargetPath": "Views\\Impact\\Index.cshtml",
+      "FilePath": "/Users/AlexCast/Documents/ExtraPrograms/COVID19-hackthon-project/Views/Shared/_Layout.cshtml",
+      "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/Users/AlexCast/Documents/ExtraPrograms/COVID19-hackthon-project/Views/Shared/_Layout.cshtml",
-      "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FilePath": "/Users/AlexCast/Documents/ExtraPrograms/COVID19-hackthon-project/Views/Research/Search.cshtml",
+      "TargetPath": "Views\\Research\\Search.cshtml",
       "FileKind": "mvc"
     },
     {

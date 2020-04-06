@@ -20,6 +20,7 @@ namespace COVID19_hackthon_project.Controllers
 
         public IActionResult Index()
         {
+            Console.WriteLine("Loading Home Page");
             return View();
         }
 
