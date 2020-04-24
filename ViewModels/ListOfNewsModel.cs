@@ -10,7 +10,9 @@ namespace COVID19_hackthon_project.Models
         public string titleString {get; set;}
         public string authorsString {get; set;}
         public string abstractString {get; set;}
+        public string journalString {get; set;}
         public string filterCount {get; set;}
+        public int resultCount {get; set;}
 
     }
 }

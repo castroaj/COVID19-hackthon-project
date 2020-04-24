@@ -1,0 +1,10 @@
+.resultTitle {
+    font-style: italic;
+    font-weight: normal;
+}
+h1.title {
+    /*margin-right: 1000px;
+    margin-bottom: 50px;
+    */
+    font-weight: bold;
+}

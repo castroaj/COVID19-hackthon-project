@@ -11,12 +11,12 @@ function openOptions()
     if (option.style.display == "none")
     {
         option.style.display = "block"
-        button.innerHTML = '<h2>Close filtering options</h2>'
+        button.innerHTML = '<h4>Close filtering options</h4>'
     }
     else
     {
         option.style.display = "none"
-        button.innerHTML = '<h2>View filtering options</h2>'
+        button.innerHTML = '<h4>View filtering options</h4>'
     }
 }
 
@@ -37,7 +37,7 @@ function openresult(index)
     else
     {
         option.style.display = "none"
-        row.style.width = "20%";
+        row.style.width = "100%";
         button.innerHTML = "Open Result"
     }
 }

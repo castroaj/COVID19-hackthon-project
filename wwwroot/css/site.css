@@ -65,7 +65,7 @@ html {
 
 body {
   /* Margin bottom by footer height */
-  background-color: lightgrey;
+  background-color: rgb(200,200,200);
   background-repeat: no-repeat;
   background-attachment: fixed;  
   background-size: cover;
@@ -81,7 +81,11 @@ body {
 }
 
 .cardForm {
-  box-shadow: 0 15px 15px 0 rgba(0, 0, 0, 0.5);
-  margin: 30px;
+  box-shadow: 0 15px 15px 0 rgba(0, 0, 0, 0.4);
+  margin: 5px;
   background-color: rgb(240, 240, 240);
   }
+
+.backdrop {
+  background-color: white;
+}

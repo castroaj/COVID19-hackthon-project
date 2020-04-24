@@ -5,34 +5,34 @@
 }
 
 <script src="~/js/research.js" asp-append-version="true"></script>
+<link rel="stylesheet" type="text/css" href="~/css/research.css">
+<link rel="stylesheet" type="text/css" href="~/css/site.css">
+
 
 <div class="container-fluid">
-    <div class="row">
-        <div class="card mb-3" style="width: 92%;">
+    <div class="row" style="width: 100%;">
+        <div class="card mb-3">
             <div class="row no-gutters">
                 <div class="col-md-12">
                     <div class="card-header">
-                        <button id="optionsButton" onclick="openOptions()"><h2>View filtering options</h2></button>
+                        <button id="optionsButton" onclick="openOptions()"><h4>Close filtering options</h4></button>
                     </div>
-                    <div id="options" class="card-body" style="display: none;">
+                    <div id="options" class="card-body" style="display: block;">
                         <form id='form1' asp-controller="Research" asp-action="Search">
-                            <table>
-                                <tr>
-                                    <td><h4>Title Search: </h4><input name="titleSearch" type="search"></td>
-                                    <td><h4>Author Search: </h4><input name="authorSearch" type="search"></td>
-                                    <td><h4>Abstract Search: </h4><input name="abstractSearch" type="search"></td>
-                                    <td><h4># of Results</h4></td>
-                                    <td><select name="filterCount">
-                                        <option value="all">All Results</option>
-                                        <option value="10">10</option>
-                                        <option value="25">25</option>
-                                        <option value="50">50</option>
-                                        <option value="100">100</option>
-                                        <option value="500">500</option>
-                                        <option value="1000">1000</option>
-                                    </select></td><br>
-                                </tr>
-                            </table>
+                            <h4>Title Search: </h4><input name="titleSearch" type="search" value='@Model.titleString'>
+                            <h4>Journal Search: </h4><input name="JournalSearch" type="search" value='@Model.journalString'>
+                            <h4>Author Search: </h4><input name="authorSearch" type="search" value='@Model.authorsString'>
+                            <h4>Abstract Search: </h4><input name="abstractSearch" type="search" value='@Model.abstractString'>
+                            <h4># of Results</h4>
+                            <select name="filterCount">
+                                <option value="all">All Results</option>
+                                <option value="10">10</option>
+                                <option value="25">25</option>
+                                <option value="50">50</option>
+                                <option value="100">100</option>
+                                <option value="500">500</option>
+                                <option value="1000">1000</option>
+                            </select><br>
                             <button type="submit">Submit</button>
                         </form>
                     </div>
@@ -42,22 +42,27 @@
     </div>
 
 
-    <div class="card-deck">
+    <div class="card cardForm">
+        <div class="card-deck" style="padding: 50px;">
+        <div>
+            <h1 class="title text-center">@Model.resultCount Results Found:</h1>
+        </div>
         @foreach (var i in Model.List)
         {
-            <div id='row-@i.Title' class="row" style="width: 20%;">
-                <div class="card mb-3 cardForm" style="margin-left: 40px;">
+            <div id='row-@i.Title' class='row' style="width: 100%; margin: 5px;">
+                <div class="card mb-3 cardForm">
                     <div class="row no-gutters">
                         <div class="col-md-12">
                             <div class="card-header">
-                                <h5>@i.Title</h5>
-                                <button id="'result-@i.Title'" onclick="openresult('@i.Title')">Open Result</button>
+                                <h5 class="resultTitle"><b>Title:</b> @i.Title</h5>
+                                <h5 class="resultTitle"><b>Journal:</b> @i.Journal</h5>
+                                <h5 class="resultTitle"><b>Authors:</b> @i.Authors</h5>
+                                <h5 class="resultTitle"><b>Year:</b> @i.Year</h5>
+                                <h5 class="resultTitle"><b>DOI Link:</b> @i.DOI</h5>
+                                <button id='result-@i.Title' onclick="openresult('@i.Title')">Open Result</button>
                             </div>
                             <div id='result-body-@i.Title' class="card-body" style="display: none;">
-                                <h5><strong>Authors:</strong> @i.Authors</h5>
-                                <h5><strong>Year:</strong> @i.Year</h5>
-                                <h5><strong>DOI Link:</strong> @i.DOI</h5>
-                                <h5><strong>Abstract:</strong></h5>
+                                <h5><b>Abstract</b></h5>
                                 <p>@i.Abstract</p>
                             </div>
                         </div>
@@ -65,5 +70,6 @@
                 </div>
             </div>
         }
+        </div>
     </div>
 </div>

@@ -30,17 +30,19 @@ namespace COVID19_hackthon_project.Controllers
             return View(NewsData);
         }
 
-        public IActionResult Search(string titleSearch, string authorSearch, string abstractSearch, string filterCount)
+        public IActionResult Search(string titleSearch, string journalSearch, string authorSearch, string abstractSearch, string filterCount)
         {
             NewsData = new ListOfNewsModel(){
-                List = getSearchData(titleSearch, authorSearch, abstractSearch, filterCount),
+                List = getSearchData(titleSearch, journalSearch, authorSearch, abstractSearch, filterCount),
                 titleString = titleSearch,
+                journalString = journalSearch,
                 authorsString = authorSearch,
                 abstractString = abstractSearch,
                 filterCount = filterCount
             };
             Console.WriteLine("Loading Research Page");
             Console.WriteLine(NewsData.List.Count + " results found");
+            NewsData.resultCount = NewsData.List.Count;
             return View(NewsData);
         }
 
@@ -101,7 +103,7 @@ namespace COVID19_hackthon_project.Controllers
             return listOfNewsData;
         }
 
-        public List<NewsModel> getSearchData(string titleSearch, string authorSearch, string abstractSearch, string filterCount)
+        public List<NewsModel> getSearchData(string titleSearch, string journalSearch, string authorSearch, string abstractSearch, string filterCount)
         {
             var connectionStringBuilder = new SqliteConnectionStringBuilder();
             List<NewsModel> listOfNewsData = new List<NewsModel>();
@@ -125,7 +127,7 @@ namespace COVID19_hackthon_project.Controllers
                     @"
                         SELECT Title, Authors, Abstract, Year, Journal, DOI 
                         FROM news 
-                        WHERE Title like '%" + titleSearch + "%' AND Authors like '%"+ authorSearch +"%' AND Abstract like '%"+ abstractSearch +"%'" +  
+                        WHERE Title like '%" + titleSearch + "%' AND Authors like '%"+ authorSearch +"%' AND Abstract like '%"+ abstractSearch +"%' AND Journal like '%"+journalSearch+"%'" +  
                         "ORDER BY NewsID;";
                 }
                 else
