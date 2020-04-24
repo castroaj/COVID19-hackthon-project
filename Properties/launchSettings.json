@@ -18,7 +18,7 @@
     "COVID19_hackthon_project": {
       "commandName": "Project",
       "launchBrowser": true,
-      "applicationUrl": "http://192.168.1.235:5001;https://192.168.1.235:5002",
+      "applicationUrl": "http://127.0.0.1:5001",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
